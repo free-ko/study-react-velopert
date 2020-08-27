@@ -1,14 +1,11 @@
-import React from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
+import MyComponent from './MyComponent';
 
-function App() {
-  const name = "FREEKO";
-  return (
-    <>
-      {/* 주석 */}
-      <div className="react">{name}</div>;<input></input>
-    </>
-  );
+class App extends Component {
+  render() {
+    return <MyComponent name={3}> React </MyComponent>;
+  }
 }
 
 export default App;
