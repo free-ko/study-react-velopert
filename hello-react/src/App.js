@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import MyComponent from './MyComponent';
+import Say from './Say';
 
 class App extends Component {
   render() {
-    return <MyComponent name={3}> React </MyComponent>;
+    return <Say />;
   }
 }
 
