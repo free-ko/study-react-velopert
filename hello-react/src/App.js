@@ -1,28 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import EventPractice from './EventPractice';
 
-class App extends React.Component {
-  state = {
-    count: 0,
-  };
-
-  plus = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
-
-  minus = () => {
-    this.setState({ count: this.state.count - 1 });
-  };
-
-  render() {
-    return (
-      <div>
-        <h1>The number is {this.state.count}</h1>
-        <button onClick={this.plus}>Plus</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return <EventPractice />;
+};
 
 export default App;
