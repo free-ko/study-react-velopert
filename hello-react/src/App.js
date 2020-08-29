@@ -1,29 +1,28 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Say from './Say';
 
-function Food({ name, hot }) {
-  return (
-    <div>
-      <h1>I Like {name}</h1>
-      <h2>Spicy is {hot}</h2>
-    </div>
-  );
-}
+class App extends React.Component {
+  state = {
+    count: 0,
+  };
 
-const FoodILike = [
-  { name: 'kimchi', hot: 'strong' },
-  { name: 'kimbap', hot: 'soso' },
-];
+  plus = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
 
-function App() {
-  return (
-    <div>
-      {FoodILike.map((dish) => (
-        <Food name={dish.name} hot={dish.hot} />
-      ))}
-    </div>
-  );
+  minus = () => {
+    this.setState({ count: this.state.count - 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>The number is {this.state.count}</h1>
+        <button onClick={this.plus}>Plus</button>
+        <button onClick={this.minus}>Minus</button>
+      </div>
+    );
+  }
 }
 
 export default App;
